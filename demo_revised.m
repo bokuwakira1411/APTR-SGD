@@ -20,8 +20,7 @@ P_Omega = 1.*(P_Omega <= 1-missing_ratio);
 miu   = 0.1;
 theta = 1e-3;
 R = R(2:end);
-%[G, error] = OLSTRSGD_revised(Y, P_Omega,miu, theta,R,Z_true);
-[G, error] = OLSTRSGD(Y, P_Omega,miu, theta, R);
+[G, error] = APTR_SGD(Y, P_Omega,miu, theta,R,Z_true);
 figure; plot(error,'b','LineWidth',2); 
 ylabel('ERROR'); xlabel('Iteration (aka time index)');
 title('Convergence rate')
