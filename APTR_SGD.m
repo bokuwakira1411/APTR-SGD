@@ -1,4 +1,4 @@
-function [G,e] = OLSTRSGD_Thanh(Y,P_Omega, miu, theta,R,Z_true)
+function [G,e] = APTR_SGD(Y,P_Omega, miu, theta,R,Z_true)
 %% fix theta[t] = 0.001 (step size), miu[t] = 0.01 for t = 1,...
 % Initialize
 G = Initialize(Y,R);
